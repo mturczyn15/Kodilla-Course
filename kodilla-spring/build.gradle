@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.17.RELEASE'
+        springBootVersion = '2.0.1.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -27,3 +27,4 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
