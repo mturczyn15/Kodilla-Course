@@ -1,17 +1,17 @@
 package com.kodilla.stream;
 
-/*import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.calculator.ActionExecutor;
 import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.Executor;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.lambda.Processor;
-import com.kodilla.stream.reference.FunctionalCalculator;*/
-
 import com.kodilla.stream.person.People;
+import com.kodilla.stream.reference.FunctionalCalculator;
 
 public class StreamMainn {
     public static void main(String[] args) {
-        /*Processor processor = new Processor();
+        Processor processor = new Processor();
         Executor codeToExecute = () -> System.out.println("This is an example text.");
         processor.execute(codeToExecute);
 
@@ -36,7 +36,7 @@ public class StreamMainn {
         poemBeautifier.beautify("Hello I am Marcin Turczyn", (text) -> text.substring(0,5) + "," + text.substring(5));
 
         System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);*/
+        NumbersGenerator.generateEven(20);
 
         People.getList().stream()
                 .map(String::toUpperCase)
@@ -46,7 +46,10 @@ public class StreamMainn {
 //                .filter(s -> s.startsWith("M"))
                 .forEach(System.out::println);
 
+        System.out.println();
 
-
+        ActionExecutor actionExecutor = new ActionExecutor();
+        System.out.println(actionExecutor.executeAction(4, 4, (a,b) -> a/b));
+        System.out.println(actionExecutor.executeAction(34, 24, (a, b) -> a / b + 1 -4 ));
     }
 }
